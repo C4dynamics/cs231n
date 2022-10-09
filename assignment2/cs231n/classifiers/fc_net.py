@@ -67,6 +67,17 @@ class FullyConnectedNet(object):
         # initialized from a normal distribution centered at 0 with standard       #
         # deviation equal to weight_scale. Biases should be initialized to zero.   #
         #                                                                          #
+        """ 
+        in lecture5.pdf (convolutional neural networks, sl.62):
+            volume size:
+                W1 x H1 x D1    (width height depth)  
+            hyperparameters:
+                K filters number (powers of 2).  
+                F spatial extent. 
+                S stride 
+                P zero padding ammount. 
+            in the output volume, the d-th depth slice (of size W2 x H2) is the result of performing a valid convolution of the d-th filter over the input volume with a stride of S, and the offset bt d-th bias.
+        """
         # When using batch normalization, store scale and shift parameters for the #
         # first layer in gamma1 and beta1; for the second layer use gamma2 and     #
         # beta2, etc. Scale parameters should be initialized to ones and shift     #
